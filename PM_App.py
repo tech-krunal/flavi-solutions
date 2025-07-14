@@ -39,7 +39,7 @@ st.markdown(
         background-color: pink;
     }
     .stSlider > div[data-baseweb="slider"] > div > div > div {
-        background: linear-gradient(to right, #108ffd 0%, #083a71 50%, rgba(172, 177, 195, 0.25) 50%, rgba(172, 177, 195, 0.25) 100%);
+        # background: linear-gradient(to right, #108ffd 0%, #083a71 50%, rgba(172, 177, 195, 0.25) 50%, rgba(172, 177, 195, 0.25) 100%);
         background-color: yellow;
     }
 
