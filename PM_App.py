@@ -44,7 +44,7 @@ st.markdown(
     }
 
     .stSlider label {
-        color: yellow;
+        color: darkblue;
     }
     </style>
     """,
