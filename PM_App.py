@@ -66,8 +66,8 @@ st.markdown(
 )
 
 rpm = st.sidebar.number_input('RPM', min_value=500, max_value=2500, value=1500, step=1)
-bearing_temp = st.sidebar.number_input('Bearing Temperature (°C)', min_value=30.0, max_value=150.0, value=65.0, step=1.0)
-vibration_magnitude = st.sidebar.number_input('Vibration Magnitude', min_value=0.0, max_value=20.0, value=5.0, step=0.1)
+bearing_temp = st.sidebar.number_input('Bearing Temperature (°C)', min_value=30.0, max_value=150.0, value=49.0, step=1.0)
+vibration_magnitude = st.sidebar.number_input('Vibration Magnitude', min_value=0.0, max_value=10.0, value=1.0, step=0.1)
 temp_diff = st.sidebar.number_input('Temperature Difference (°C)', min_value=0.0, max_value=100.0, value=25.0, step=1.0)
 
 st.subheader("📊 Input Gauges")
