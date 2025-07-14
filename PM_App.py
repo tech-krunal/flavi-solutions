@@ -156,7 +156,7 @@ ax.tick_params(colors='white')
 ax.xaxis.label.set_color('white')
 ax.yaxis.label.set_color('white')
 ax.set_ylim(-0.5, max(3, max(st.session_state.history) + 0.5))
-ax.grid(True, color='white', linestyle='--', alpha=0.5)
+ax.grid(True, color='white', linestyle='--', alpha=1)
 st.pyplot(fig)
 
 # Show input values
