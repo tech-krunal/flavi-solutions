@@ -36,15 +36,15 @@ st.markdown(
     """
     <style>
     .stSlider > div[data-baseweb="slider"] > div > div > div[role="slider"] {
-        background-color: #00172b;
+        background-color: dark blue;
     }
     .stSlider > div[data-baseweb="slider"] > div > div > div {
-        background: linear-gradient(to right, #00172b 0%, #00172b 100%);
-        background-color: #00172b 
+        background: linear-gradient(to right, darkblue 0%, darkblue 100%);
+        background-color: darkblue;
     }
 
     .stSlider label {
-        color: #00172b;
+        color: darkblue;
     }
     </style>
     """,
