@@ -55,33 +55,35 @@ st.sidebar.markdown(
 st.markdown(
     """
     <style>
-    /* Apply gradient only to the filled part of the slider track */
-    .stSlider > div[data-baseweb="slider"] > div > div:nth-child(1) {
+    /* Customize the filled part (left of thumb) with gradient */
+    .stSlider > div[data-baseweb="slider"] > div > div:first-child {
         background: linear-gradient(to right, #108ffd 0%, #083a71 50%, rgba(172, 177, 195, 0.25) 50%, rgba(172, 177, 195, 0.25) 100%) !important;
         height: 6px;
-        border-radius: 10px;
+        border-radius: 6px;
     }
 
-    /* Unfilled portion (right of the thumb) stays light */
+    /* Customize the unfilled part (right of thumb) with light grey */
     .stSlider > div[data-baseweb="slider"] > div > div:nth-child(2) {
-        background-color: rgba(172, 177, 195, 0.25) !important;
+        background: rgba(200, 200, 200, 0.25) !important;
         height: 6px;
-        border-radius: 10px;
+        border-radius: 6px;
     }
 
-    /* Thumb styling: clean circle */
+    /* Thumb (keep it native size and feel, just refine color if needed) */
     .stSlider > div[data-baseweb="slider"] > div > div[role="slider"] {
-        background-color: white !important;
-        border: 2px solid #083a71 !important;
-        width: 20px;
-        height: 20px;
-        margin-top: -7px;
-        z-index: 2;
+        background-color: #083a71 !important;
+        border: none !important;
+        box-shadow: 0 0 0 1.5px white inset, 0 0 3px rgba(0, 0, 0, 0.2);
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        margin-top: -5px;
     }
 
-    /* Label */
+    /* Optional: Label color */
     .stSlider label {
-        color: darkblue;
+        color: #00172b;
+        font-weight: 600;
     }
     </style>
     """,
