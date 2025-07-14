@@ -32,17 +32,45 @@ st.sidebar.markdown(
     unsafe_allow_html=True
 )
 
+# st.markdown(
+#     """
+#     <style>
+#     .stSlider > div[data-baseweb="slider"] > div > div > div[role="slider"] {
+#         background-color: dark blue;
+#     }
+#     .stSlider > div[data-baseweb="slider"] > div > div > div {
+#         background: linear-gradient(to right, #108ffd 0%, #083a71 50%, rgba(172, 177, 195, 0.25) 50%, rgba(172, 177, 195, 0.25) 100%);
+#         background-color: darkblue;
+#     }
+
+#     .stSlider label {
+#         color: darkblue;
+#     }
+#     </style>
+#     """,
+#     unsafe_allow_html=True
+# )
+
 st.markdown(
     """
     <style>
-    .stSlider > div[data-baseweb="slider"] > div > div > div[role="slider"] {
-        background-color: dark blue;
-    }
-    .stSlider > div[data-baseweb="slider"] > div > div > div {
-        background: linear-gradient(to right, #108ffd 0%, #083a71 50%, rgba(172, 177, 195, 0.25) 50%, rgba(172, 177, 195, 0.25) 100%);
-        background-color: darkblue;
+    /* This targets the slider track bar */
+    .stSlider > div[data-baseweb="slider"] > div {
+        background: linear-gradient(to right, #108ffd 0%, #083a71 50%, rgba(172, 177, 195, 0.25) 50%, rgba(172, 177, 195, 0.25) 100%) !important;
+        border-radius: 10px;
+        height: 6px;
     }
 
+    /* This styles the thumb (slider circle/handle) */
+    .stSlider > div[data-baseweb="slider"] > div > div[role="slider"] {
+        background-color: #083a71 !important;
+        border: 2px solid white;
+        width: 20px;
+        height: 20px;
+        margin-top: -7px;
+    }
+
+    /* Label style */
     .stSlider label {
         color: darkblue;
     }
