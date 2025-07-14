@@ -32,45 +32,17 @@ st.sidebar.markdown(
     unsafe_allow_html=True
 )
 
-# st.markdown(
-#     """
-#     <style>
-#     .stSlider > div[data-baseweb="slider"] > div > div > div[role="slider"] {
-#         background-color: dark blue;
-#     }
-#     .stSlider > div[data-baseweb="slider"] > div > div > div {
-#         background: linear-gradient(to right, #108ffd 0%, #083a71 50%, rgba(172, 177, 195, 0.25) 50%, rgba(172, 177, 195, 0.25) 100%);
-#         background-color: darkblue;
-#     }
-
-#     .stSlider label {
-#         color: darkblue;
-#     }
-#     </style>
-#     """,
-#     unsafe_allow_html=True
-# )
-
 st.markdown(
     """
     <style>
-    /* Gradient track for sliders */
-    .stSlider > div[data-baseweb="slider"] > div {
-        background: linear-gradient(to right, #108ffd 0%, #083a71 50%, rgba(172, 177, 195, 0.25) 50%, rgba(172, 177, 195, 0.25) 100%) !important;
-        height: 6px;
-        border-radius: 4px;
+    .stSlider > div[data-baseweb="slider"] > div > div > div[role="slider"] {
+        background-color: dark blue;
+    }
+    .stSlider > div[data-baseweb="slider"] > div > div > div {
+        background: linear-gradient(to right, #108ffd 0%, #083a71 50%, rgba(172, 177, 195, 0.25) 50%, rgba(172, 177, 195, 0.25) 100%);
+        background-color: darkblue;
     }
 
-    /* Optional: preserve default slider thumb look */
-    .stSlider > div[data-baseweb="slider"] > div > div[role="slider"] {
-        background-color: white !important;
-        border: 2px solid #083a71 !important;
-        width: 16px;
-        height: 16px;
-        margin-top: -5px;
-    }
-
-    /* Label color */
     .stSlider label {
         color: darkblue;
     }
@@ -78,6 +50,7 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
 
 load_percentage = st.sidebar.slider('Load Percentage (%)', min_value=0, max_value=100, value=50, step=5)
 motor_current = st.sidebar.slider('Motor Current (A)', min_value=0.5, max_value=40.0, value=10.0, step=0.5)
