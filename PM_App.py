@@ -93,7 +93,7 @@ def gauge_options(value, min_val, max_val, name):
                 "valueAnimation": True,
                 "formatter": f"{value}",
                 "offsetCenter": [0, "20%"],
-                "color": "#111"
+                "color": "white"
             },
             "data": [{"value": value, "name": name}]
         }]
