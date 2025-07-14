@@ -58,7 +58,7 @@ st.markdown(
     """
     <style>
     .stNumberInput label {
-        color: #00172b;
+        color: DarkBlue;
     }
     </style>
     """,
