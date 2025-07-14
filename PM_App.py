@@ -32,18 +32,54 @@ st.sidebar.markdown(
     unsafe_allow_html=True
 )
 
+# st.markdown(
+#     """
+#     <style>
+#     .stSlider > div[data-baseweb="slider"] > div > div > div[role="slider"] {
+#         background-color: darkblue;
+
+#     }
+#     .stSlider > div[data-baseweb="slider"] > div > div > div {
+#         background: linear-gradient(to right, #108ffd 0%, #083a71 50%, rgba(172, 177, 195, 0.25) 50%, rgba(172, 177, 195, 0.25) 100%);
+#         background-color: darkblue;
+#     }
+
+#     .stSlider label {
+#         color: darkblue;
+#     }
+#     </style>
+#     """,
+#     unsafe_allow_html=True
+# )
+
 st.markdown(
     """
     <style>
-    .stSlider > div[data-baseweb="slider"] > div > div > div[role="slider"] {
-        background-color: darkblue;
-
-    }
-    .stSlider > div[data-baseweb="slider"] > div > div > div {
-        background: linear-gradient(to right, #108ffd 0%, #083a71 50%, rgba(172, 177, 195, 0.25) 50%, rgba(172, 177, 195, 0.25) 100%);
-        background-color: darkblue;
+    /* Apply gradient only to the filled part of the slider track */
+    .stSlider > div[data-baseweb="slider"] > div > div:nth-child(1) {
+        background: linear-gradient(to right, #108ffd 0%, #083a71 50%, rgba(172, 177, 195, 0.25) 50%, rgba(172, 177, 195, 0.25) 100%) !important;
+        height: 6px;
+        border-radius: 10px;
     }
 
+    /* Unfilled portion (right of the thumb) stays light */
+    .stSlider > div[data-baseweb="slider"] > div > div:nth-child(2) {
+        background-color: rgba(172, 177, 195, 0.25) !important;
+        height: 6px;
+        border-radius: 10px;
+    }
+
+    /* Thumb styling: clean circle */
+    .stSlider > div[data-baseweb="slider"] > div > div[role="slider"] {
+        background-color: white !important;
+        border: 2px solid #083a71 !important;
+        width: 20px;
+        height: 20px;
+        margin-top: -7px;
+        z-index: 2;
+    }
+
+    /* Label */
     .stSlider label {
         color: darkblue;
     }
@@ -51,6 +87,7 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
 
 
 load_percentage = st.sidebar.slider('Load Percentage (%)', min_value=0, max_value=100, value=50, step=5)
