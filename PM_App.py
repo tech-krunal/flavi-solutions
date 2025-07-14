@@ -32,52 +32,24 @@ st.sidebar.markdown(
     unsafe_allow_html=True
 )
 
-# st.markdown(
-#     """
-#     <style>
-#     .stSlider > div[data-baseweb="slider"] > div > div > div[role="slider"] {
-#         background-color: dark blue;
-#     }
-#     .stSlider > div[data-baseweb="slider"] > div > div > div {
-#         background: linear-gradient(to right, darkblue 0%, darkblue 100%);
-#         background-color: darkblue;
-#     }
+st.markdown(
+    """
+    <style>
+    .stSlider > div[data-baseweb="slider"] > div > div > div[role="slider"] {
+        background-color: dark blue;
+    }
+    .stSlider > div[data-baseweb="slider"] > div > div > div {
+        background: linear-gradient(to right, #108ffd 0%, #083a71 50%, rgba(172, 177, 195, 0.25) 50%, rgba(172, 177, 195, 0.25) 100%);
+        background-color: darkblue;
+    }
 
-#     .stSlider label {
-#         color: darkblue;
-#     }
-#     </style>
-#     """,
-#     unsafe_allow_html=True
-# )
-
-# Gradient Customization via Sliders
-st.sidebar.markdown("### 🎨 Customize Slider Gradient")
-
-color1 = st.sidebar.color_picker("Color 1", "#108ffd")
-color2 = st.sidebar.color_picker("Color 2", "#083a71")
-color3 = st.sidebar.color_picker("Color 3", "rgba(172, 177, 195, 0.25)")
-
-stop1 = st.sidebar.slider("Stop 1 (%)", 0, 50, 0)
-stop2 = st.sidebar.slider("Stop 2 (%)", 0, 100, 50)
-stop3 = st.sidebar.slider("Stop 3 (%)", 50, 100, 100)
-
-gradient_css = f"""
-<style>
-.stSlider > div[data-baseweb="slider"] > div > div > div[role="slider"] {{
-    background-color: darkblue;
-}}
-.stSlider > div[data-baseweb="slider"] > div > div > div {{
-    background: linear-gradient(to right, {color1} {stop1}%, {color2} {stop2}%, {color3} {stop2}%, {color3} {stop3}%);
-}}
-.stSlider label {{
-    color: darkblue;
-}}
-</style>
-"""
-
-st.markdown(gradient_css, unsafe_allow_html=True)
-
+    .stSlider label {
+        color: darkblue;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 load_percentage = st.sidebar.slider('Load Percentage (%)', min_value=0, max_value=100, value=50, step=5)
 motor_current = st.sidebar.slider('Motor Current (A)', min_value=0.5, max_value=40.0, value=10.0, step=0.5)
@@ -127,8 +99,6 @@ def gauge_options(value, min_val, max_val, name):
         }]
     }
 
-
-     
 col1, col2, col3 = st.columns(3)
 with col1:
     st_echarts(gauge_options(rpm, 500, 3000, "RPM"), height="250px")
