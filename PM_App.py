@@ -54,23 +54,23 @@ st.sidebar.markdown(
 st.markdown(
     """
     <style>
-    /* This targets the slider track bar */
+    /* Gradient track for sliders */
     .stSlider > div[data-baseweb="slider"] > div {
         background: linear-gradient(to right, #108ffd 0%, #083a71 50%, rgba(172, 177, 195, 0.25) 50%, rgba(172, 177, 195, 0.25) 100%) !important;
-        border-radius: 10px;
         height: 6px;
+        border-radius: 4px;
     }
 
-    /* This styles the thumb (slider circle/handle) */
+    /* Optional: preserve default slider thumb look */
     .stSlider > div[data-baseweb="slider"] > div > div[role="slider"] {
-        background-color: #083a71 !important;
-        border: 2px solid white;
-        width: 20px;
-        height: 20px;
-        margin-top: -7px;
+        background-color: white !important;
+        border: 2px solid #083a71 !important;
+        width: 16px;
+        height: 16px;
+        margin-top: -5px;
     }
 
-    /* Label style */
+    /* Label color */
     .stSlider label {
         color: darkblue;
     }
