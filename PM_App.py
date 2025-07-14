@@ -32,63 +32,26 @@ st.sidebar.markdown(
     unsafe_allow_html=True
 )
 
-# st.markdown(
-#     """
-#     <style>
-#     .stSlider > div[data-baseweb="slider"] > div > div > div[role="slider"] {
-#         background-color: darkblue;
-
-#     }
-#     .stSlider > div[data-baseweb="slider"] > div > div > div {
-#         background: linear-gradient(to right, #108ffd 0%, #083a71 50%, rgba(172, 177, 195, 0.25) 50%, rgba(172, 177, 195, 0.25) 100%);
-#         background-color: darkblue;
-#     }
-
-#     .stSlider label {
-#         color: darkblue;
-#     }
-#     </style>
-#     """,
-#     unsafe_allow_html=True
-# )
-
 st.markdown(
     """
     <style>
-    /* Customize the filled part (left of thumb) with gradient */
-    .stSlider > div[data-baseweb="slider"] > div > div:first-child {
-        background: linear-gradient(to right, #108ffd 0%, #083a71 50%, rgba(172, 177, 195, 0.25) 50%, rgba(172, 177, 195, 0.25) 100%) !important;
-        height: 6px;
-        border-radius: 6px;
+    .stSlider > div[data-baseweb="slider"] > div > div > div[role="slider"] {
+        background-color: darkblue;
+
+    }
+    .stSlider > div[data-baseweb="slider"] > div > div > div {
+        background: linear-gradient(to right, #108ffd 0%, #083a71 50%, rgba(172, 177, 195, 0.25) 50%, rgba(172, 177, 195, 0.25) 100%);
+        background-color: darkblue;
     }
 
-    /* Customize the unfilled part (right of thumb) with light grey */
-    .stSlider > div[data-baseweb="slider"] > div > div:nth-child(2) {
-        background: rgba(200, 200, 200, 0.25) !important;
-        height: 6px;
-        border-radius: 6px;
-    }
-
-    /* Thumb (keep it native size and feel, just refine color if needed) */
-    .stSlider > div[data-baseweb="slider"] > div > div[role="slider"] {
-        background-color: #083a71 !important;
-        border: none !important;
-        box-shadow: 0 0 0 1.5px white inset, 0 0 3px rgba(0, 0, 0, 0.2);
-        width: 16px;
-        height: 16px;
-        border-radius: 50%;
-        margin-top: -5px;
-    }
-
-    /* Optional: Label color */
     .stSlider label {
-        color: #00172b;
-        font-weight: 600;
+        color: darkblue;
     }
     </style>
     """,
     unsafe_allow_html=True
 )
+
 
 
 
